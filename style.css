@@ -1,0 +1,80 @@
+/* gör så 100vh inte tar upp mer än viewporten 
+   eftersom standard margin gör den lite större 
+   och då blir det en ful scrollbar 
+*/
+html, body {
+	margin: 0 0 0 0;
+}
+
+body {
+	height: 100vh;
+
+	background-color: black;
+
+	display: grid;
+	grid-template-rows: 15% auto 10%;
+	row-gap: 5px;
+
+	/* tomrumm på sidorna */
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+/* lägg till mellanrum på toppen och botten */
+header {
+	margin-top: 10px;
+}
+
+footer {
+	margin-bottom: 10px;	
+}
+
+body > * {
+	background-color: #212121;
+	color: white;
+
+	border: 1px solid white;
+	border-radius: 10px;
+
+	padding: 10px;
+}
+
+nav {
+	display: grid;
+	grid-auto-flow: column;
+	column-gap: 5px;
+
+	height: 100%;
+}
+
+nav > a {
+	text-align: center;
+	line-height: 4.5;
+
+	border: 1px solid white;
+	border-radius: 10px;
+
+	background-color: #2e2b2b;
+}
+
+a:visited {
+	color: #c229bf;
+}
+
+footer {
+	text-align: center;
+	line-height: 0.5;
+}
+
+table, table td, table th {
+	border: solid black 1px;
+	border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+	background-color: #423e3e;
+}
+
+tr:first-child {
+	background-color: #a39696;
+}
